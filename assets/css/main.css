@@ -474,6 +474,10 @@ blockquote > :last-child {
   list-style-type: disc !important;
 }
 
+.time {
+  margin: 20px 0 20px 0;
+}
+
 @media (max-width: 600px) {
   .path-nav li {
     max-width: 100px; /* More aggressive truncation on mobile */
