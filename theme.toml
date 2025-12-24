@@ -16,5 +16,6 @@ homepage = "https://github.com/ntk148v"
 
 [module]
 [module.hugoVersion]
-extended = true
+extended = false
 min = "0.93.0"
+
