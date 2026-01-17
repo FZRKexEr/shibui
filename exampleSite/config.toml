@@ -5,6 +5,9 @@ theme = "shibui"
 themesDir = "../.."
 enableGitInfo = true
 
+[params]
+  math = true
+
 [params.author]
 name = "Kien Nguyen-Tuan"
 email = "kiennt2609@gmail.com"
@@ -16,6 +19,12 @@ email = "kiennt2609@gmail.com"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true  # Enable user to embed HTML snippets in Markdown content.
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$'], ['\\[', '\\]']]
+          inline = [['$', '$'], ['\\(', '\\)']]
   [markup.highlight]
     codeFences = true
     guessSyntax = true

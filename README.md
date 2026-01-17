@@ -57,6 +57,7 @@ Table of contents:
 - Table of Contents support
 - Tags support
 - Customizable
+- Optional KaTeX math rendering (disabled by default)
 
 ## Installation
 
@@ -80,6 +81,7 @@ theme = "shibui"
 [params]
   author = "Your Name"
   email = "your.email@example.com"
+  math = true
 
 [menu]
   [[menu.main]]
@@ -152,6 +154,25 @@ For example, you want to create a dark theme, just adjust the base color.
   --bg-s: 0%;
   --bg-l: 12%;
 }
+```
+
+## Math (LaTeX)
+
+Enable KaTeX math rendering by setting `params.math = true`. For best results
+with Goldmark, allow math delimiters to pass through unmodified:
+
+```toml
+[params]
+  math = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$'], ['\\[', '\\]']]
+          inline = [['$', '$'], ['\\(', '\\)']]
 ```
 
 ## Contributing
