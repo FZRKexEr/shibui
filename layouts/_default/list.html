@@ -1,9 +1,12 @@
 {{ define "main" }}
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-    <div class="time-list">
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+<div class="time-list">
+    {{ range (.Pages.ByDate.Reverse.GroupByDate "2006-01") }}
+    <div class="time-list-group">
+        <div class="time-list-month">{{ replace .Key "-" "/" }}</div>
         <ul>
-            {{ range .Pages }}
+            {{ range .Pages.ByDate.Reverse }}
             <li>
                 <span>{{- partial "date" .Date -}}</span>
                 <div><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></div>
@@ -11,4 +14,6 @@
             {{ end }}
         </ul>
     </div>
+    {{ end }}
+</div>
 {{ end }}

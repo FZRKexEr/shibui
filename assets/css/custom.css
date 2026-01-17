@@ -1,1 +1,17 @@
-/* You can add custom style here */
+:root {
+    --container-width: min(80ch, 92vw);
+}
+
+body {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+}
+
+.time-list-group + .time-list-group {
+    margin-top: var(--spacing-base);
+}
+
+.time-list-month {
+    margin: 0 0 var(--spacing-sm);
+    font-weight: bold;
+}
