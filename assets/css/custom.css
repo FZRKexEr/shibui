@@ -15,3 +15,10 @@ body {
     margin: 0 0 var(--spacing-sm);
     font-weight: bold;
 }
+
+.time {
+    margin: var(--spacing-lg) 0 var(--spacing-sm);
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+    opacity: 0.75;
+}
