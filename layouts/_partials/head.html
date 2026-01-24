@@ -10,6 +10,14 @@
 />{{ end }} {{/* Canonical URL */}}
 <link rel="canonical" href="{{ .Permalink }}" />
 
+{{/* Google Fonts: Noto Serif SC (CJK) */}}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap"
+    rel="stylesheet"
+/>
+
 {{/* Open Graph */}}
 <meta property="og:title" content="{{ .Title }}" />
 {{ with .Description | default .Site.Params.description }}<meta
